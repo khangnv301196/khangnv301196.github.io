@@ -1792,7 +1792,7 @@
             document.getElementById('lunarMonth2').innerText = "Th\341ng " + cc[1];
             document.getElementById('lunarYear').innerText = "N\u0103m " + cc[2];
             document.getElementById('goodHours').innerText = "Gi\u1EDD ho\u00E0ng \u0111\u1EA1o: " + getGioHoangDao(jd);
-            document.getElementById('yearIcon').style.backgroundImage = 'url("./images/tuoi_' + ((lunar.jd + 1) % 12 + 1) + '.png")';
+            document.getElementById('yearIcon').style.backgroundImage = 'url(\"./images/tuoi_' + ((lunar.jd + 1) % 12 + 1) + '.png\")';
 
         }
 
@@ -1933,14 +1933,14 @@
         });
 
         function showDialog() {
-            var lunar = getLunarDate(today.getDate(), today.getMonth() + 1, today.getFullYear());
-            var s = getDayString(lunar, today.getDate(), today.getMonth() + 1, today.getFullYear());
-            s += " \u00E2m l\u1ECBch\n";
-            s += getDayName(lunar);
-            s += "\nGi\u1EDD \u0111\u1EA7u ng\u00E0y: " + getCanHour0(lunar.jd) + " " + CHI[0];
-            s += "\nTi\u1EBFt: " + TIETKHI[getSunLongitude(lunar.jd + 1, 7.0)];
-            s += "\nGi\u1EDD ho\u00E0ng \u0111\u1EA1o: " + getGioHoangDao(lunar.jd);
-            alert(s);
+            // var lunar = getLunarDate(today.getDate(), today.getMonth() + 1, today.getFullYear());
+            // var s = getDayString(lunar, today.getDate(), today.getMonth() + 1, today.getFullYear());
+            // s += " \u00E2m l\u1ECBch\n";
+            // s += getDayName(lunar);
+            // s += "\nGi\u1EDD \u0111\u1EA7u ng\u00E0y: " + getCanHour0(lunar.jd) + " " + CHI[0];
+            // s += "\nTi\u1EBFt: " + TIETKHI[getSunLongitude(lunar.jd + 1, 7.0)];
+            // s += "\nGi\u1EDD ho\u00E0ng \u0111\u1EA1o: " + getGioHoangDao(lunar.jd);
+            // alert(s);
 
             var item = localStorage.getItem(`${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`)
             if (item !== null) {
